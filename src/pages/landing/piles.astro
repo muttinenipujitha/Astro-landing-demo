@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pilesData } from "../../data/piles.js";
+
+const url = new URL(Astro.request.url);
+
+const location = url.searchParams.get("location") || "India";
+const type = url.searchParams.get("type") || "Advanced";
+---
+
+<BaseLayout title="Piles Treatment">
+
+  <h1>
+    Best {type} {pilesData.treatment} Treatment in {location}
+  </h1>
+
+  <p>
+    Get expert {type.toLowerCase()} treatment in {location}.
+  </p>
+
+  <button>Book Appointment</button>
+
+  <h2>Why Choose Us?</h2>
+
+  <ul>
+    {pilesData.usps.map((u) => <li>{u}</li>)}
+  </ul>
+
+</BaseLayout>
