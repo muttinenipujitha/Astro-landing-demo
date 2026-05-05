@@ -13,6 +13,9 @@ const type = url.searchParams.get("type") || "Advanced";
   <h1>
     Best {type} {pilesData.treatment} Treatment in {location}
   </h1>
+  <h1>
+  New changes
+  </h1>
 
   <p>
     Get expert {type.toLowerCase()} treatment in {location}.
@@ -21,6 +24,7 @@ const type = url.searchParams.get("type") || "Advanced";
   <button>Book Appointment</button>
 
   <h2>Why Choose Us?</h2>
+  <h2>we are the best</h2>
 
   <ul>
     {pilesData.usps.map((u) => <li>{u}</li>)}
